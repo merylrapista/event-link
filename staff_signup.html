@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register</title>
+  <link rel="stylesheet" href="bootstrap/bootstrap.css"/>
+  <link rel="stylesheet" href="fontawesome/css/all.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to left, rgba(6,6,6,0.6), rgba(6,6,6,0.6)),
+        url('img/bg.jpeg') no-repeat center center;
+      background-size: cover; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+
+    } 
+    
+    .form-icon {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      color: #6c757d;
+      transition: 0.3s;
+      pointer-events: none;
+      font-size: 16px;
+      color: black;
+    }
+
+    .form-control:focus + .form-icon,
+    .form-control:not(:placeholder-shown) + .form-icon {
+      transform: translateY(-50%) scale(1.2);
+    }
+
+    .input-wrapper {
+      position: relative;
+
+    }
+
+    .input-wrapper input {
+      padding-left: 40px; 
+      width: 95%;
+      margin-left: 10px;
+
+    }
+    .input-wrapper input,
+    .btn {
+      width: 95%;
+      box-sizing: border-box;
+    }
+    .form-control{
+      padding: 10px;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 16px;
+      background-color: rgba(255, 255, 255, 0.169); 
+      color: black;
+
+    }
+
+    .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.5); 
+      color: black;
+
+    }
+    .card-title{
+      font-size: 30px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: bold;
+        
+    }
+   .card {
+      border-radius: 20px; 
+      background-color: rgba(255, 255, 255, 0.169); 
+      border-color: white;
+      width: 100%;
+      max-width: 500px;
+    }
+   
+    .input-wrapper select.form-control {    
+      padding-left: 40px;      
+      font-size: 16px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: rgba(255, 255, 255, 0.169);
+      color: black;
+      border: none;            
+      border-radius: 5px;
+      width: calc(100% - 20px);
+      margin-left: 10px;
+      height: 45px;        
+      box-sizing: border-box;
+    }
+
+    .input-wrapper select.form-control:focus {
+      background-color: rgba(255, 255, 255, 0.5);
+      outline: none;
+    }
+
+    .input-wrapper select + .form-icon {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      font-size: 16px;
+      pointer-events: none;
+      color: black;
+      transition: 0.3s;
+    }
+
+
+
+    .btn{
+      width: 95%;
+      margin-left: 10px;
+      padding: 10px;
+      font-size:20px ;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .text{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .back {
+      position: absolute;
+      top: 30px;
+      left: 40px;
+    }
+
+    .back a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 25px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.3s ease;
+    }
+
+    .back a:hover {
+      color: #007bff; 
+      transform: scale(1.05); 
+    }
+    
+    
+  </style>
+</head>
+<body class="bg-light">
+     <div class="back">
+        <a href="homepage.html">
+        <i class="fa-solid fa-reply"></i> Back
+        </a>
+    </div>
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class="card shadow p-4" style="width: 100%; max-width: 500px;height:90%;">
+      <h2 class="card-title text-center mb-5">Sign Up</h2>
+      <form id="regform" method="POST" action="php/staff_reg.php">
+
+        <div class="mb-4 input-wrapper">
+          <input type="text" class="form-control" name="fname" id="fname" placeholder="Full Name" required>
+          <i class="fa-solid fa-id-badge form-icon"></i>
+        </div>
+        
+        <div class="mb-4 input-wrapper">
+          <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+          <i class="fa-solid fa-envelope form-icon"></i>
+        </div>
+
+        <div class="mb-4 input-wrapper">
+          <select class="form-control" name="Specialization" id="Specialization" required>
+            <option value="" disabled selected>Select Specialization</option>
+            <option value="Photographer">Photographer</option>
+            <option value="Videographer">Videographer</option>
+            <option value="Host">Host</option>
+            <option value="DJ">DJ</option>
+          </select>
+          <i class="fa-solid fa-cogs form-icon"></i>
+        </div>
+
+        <div class="mb-4 input-wrapper">
+          <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+          <i class="fa-solid fa-lock form-icon"></i>
+        </div>
+
+        <div class="mb-4 input-wrapper">
+          <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+          <i class="fa-solid fa-lock form-icon"></i>
+        </div>
+        
+        <div class="mb-4 input-wrapper">
+          <input type="text" class="form-control" name="num" id="num" placeholder="Phone Number">
+          <i class="fa-solid fa-phone form-icon"></i>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn btn-primary">Register</button>
+      </form>
+      <div class="text text-center mt-3">
+         Already have an account? <a href="staff_login.html">Login</a>
+      </div>
+    </div>
+  </div>
+ 
+  <script src="bootstrap/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

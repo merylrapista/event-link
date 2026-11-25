@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>homepage</title>
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <style>
+    body {
+      width: 100%;
+      background: linear-gradient(to left, rgba(6,6,6,0.6), rgba(6,6,6,0.6)),
+        url('img/hompage.jpeg') no-repeat center center;
+      background-size: cover; 
+      margin: 0;
+    }
+
+    .container {
+      height: 10vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px; 
+    }
+
+    .logo{
+      width: 8vw;
+      margin-top: 15px;
+      float: left;
+      margin-left: 13px;
+    }
+    
+    .btn {
+      font-size: 35px;              
+      border-radius: 20px;         
+      border-style: solid;
+      padding: 50px 60px;        
+      border-color: #2d6a4f;
+      background-color: rgba(255, 255, 255, 0.394); 
+      color: #2d6a4f; 
+      text-decoration: none; 
+      transition: background-color 0.3s ease, transform 0.3s, box-shadow 0.3s; 
+      margin-right: 23px;
+      margin-top: 13%;
+      width: 250px;                 
+      height: 150px;               
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background-color: rgba(240, 248, 255, 0.9); 
+      transform: scale(1.05); 
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25); 
+    }
+
+    .font{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      font-size: 60px;
+      margin-top: 70px;
+      color: aliceblue;
+      margin-right: 10%;
+
+    }
+   .log {
+      padding: 10px 20px;         
+    }
+
+    .logo {
+      width: 100px;   
+      height: auto;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="log">
+    <img src="img/logo.png" class="logo" alt="logo">
+  </div>
+
+  <div class="font">
+    <h1>EventLink</h1>
+  </div>
+  <div class="container">
+    <a href="signup.html" class="btn btn-primary">
+      <i class="fas fa-user"></i> Customer
+    </a>
+
+    <a href="staff_signup.html" class="btn btn-success">
+      <i class="fas fa-user-tie"></i> Staff
+    </a>
+  </div>
+
+  
+</body>
+</html>
